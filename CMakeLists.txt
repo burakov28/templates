@@ -3,4 +3,12 @@ project(templates)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(templates main.cpp)
+set(SOURCES main.cpp)
+set(HEADERS demangle.h
+		simple-template-class.h
+		template-specialization.h
+		template-functions.h
+		using-auto.h
+		lambdas.h)
+
+add_executable(templates ${SOURCES} ${HEADERS})
